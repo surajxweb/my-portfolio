@@ -5,7 +5,7 @@ import { BsInstagram } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
-import logo from "../resources/SurajxWeb.png";
+import logo from "../resources/whitelogo.png";
 
 export default function LastComp() {
   return (
@@ -45,7 +45,7 @@ export default function LastComp() {
           <BsTwitter className={styles.socialicon} size="2em" />
         </Link>
       </div>
-      <div className={styles.madeby}>Made with 💝 by Suraj Katyayan</div>
+      <div className={styles.madeby}>Designed & Built by Suraj Katyayan.</div>
     </div>
   );
 }

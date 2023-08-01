@@ -1,14 +1,24 @@
+.container {
+  background-color: #111;
+  border: 2px solid #111;
+  color: #CCCCCC;
+  
+}
+
+.container h1, .des {
+  text-align: center;
+  margin: 20px;
+}
+
 /* ContactForm.module.css */
 .contactForm {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 35%;
+    margin: 50px auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #222;
+    min-height: 525px;
   }
   
   .contactForm label {
@@ -16,32 +26,83 @@
     flex-direction: column;
     margin-bottom: 10px;
     font-weight: 600;
-    color: #333;
+    color: #CCCCCC;
+    font-size: 16px;
+    margin: 8px;
   }
   
   .contactForm input,
   .contactForm textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #dbdada;
     border-radius: 4px;
+    margin: 20px 0;
     font-size: 16px;
+    background-color: rgb(187, 184, 184);
+    font-family: inherit;
   }
   
   .contactForm textarea {
     resize: vertical;
+    font-family: inherit;
   }
   
  .contactForm button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 20px;
+  margin-top: 10px;
+     font: inherit;
+    padding: 10px 30px;
+    font-weight: bold;
+    color: #CCCCCC;
+    background-image: linear-gradient(to bottom, #b3060f, #f00000);;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
   }
   
   .contactForm button:hover {
     background-color: #0056b3;
   }
   
+  .responsemess {
+    color: #CCCCCC;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .sec2 {
+    background-color: #222;
+    padding: 20px;
+   
+  }
+
+  .whatsappcont {
+    background-color: #111;
+    width: 55%;
+    color: #CCCCCC;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px auto 20px auto;
+    padding: 30px;
+  }
+
+  .whatsappcont h4 {
+    font-size: 40px;
+  }
+
+  .whatsappdes {
+    margin: 20px 0;
+    color: #a5a5a5;
+}
+
+.whatsappdes a {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.ctabutton {
+  font: inherit;
+  padding: 10px 30px;
+  font-weight: bold;
+  color: #CCCCCC;
+  background-image: linear-gradient(to bottom, #b3060f, #f00000);;
+  border: none;
+}

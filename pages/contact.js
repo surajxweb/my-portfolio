@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import styles from "../styles/ContactForm.module.css";
 import Navbar from "../components/navbar";
 import LastComp from "../components/LastComp";
+import { BsWhatsapp } from "react-icons/bs";
+import Footer from "../components/Footer";
+import Link from "next/link";
+import Head from "next/head";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +15,10 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [response, setResponse] = useState(0);
+
   const handleChange = (e) => {
+    setResponse(0);
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -22,7 +29,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://formspree.io/f/xwkdvoqa11", {
+      const response = await fetch("https://formspree.io/f/xwkdvoqa", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,7 +39,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         // Successful form submission logic (e.g., show success message)
-        alert("Form submitted successfully!!");
+        setResponse(1);
         setFormData({
           name: "",
           email: "",
@@ -40,7 +47,7 @@ const ContactForm = () => {
         });
       } else {
         // Error handling (e.g., show error message)
-        alert("Form submission failed. Please try again!");
+        setResponse(2);
       }
     } catch (error) {
       console.log("Error:", error);
@@ -48,45 +55,108 @@ const ContactForm = () => {
     // Clear form fields after submission (optional)
   };
 
+  var resmessage;
+  switch (response) {
+    case 0:
+      resmessage = "";
+      break;
+    case 1:
+      resmessage = "Your message was successfully recieved.";
+      break;
+    case 2:
+      resmessage =
+        "Form submission failed. Please refresh the page and try again!";
+      break;
+    default:
+      resmessage = "Server Error.  Please refresh the page and try again!";
+  }
+
   return (
     <>
-      {" "}
+      <Head>
+        <title>Contact - Suraj Katyayan: Full Stack MERN Developer!</title>
+        <meta
+          name="description"
+          content="Welcome to Suraj X Web Dev. Unleash the Power of Stunning Web Apps!"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
-      <form className={styles.contactForm} onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Message:
-          <textarea
-            name="message"
-            placeholder="Enter your message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <button type="submit">Send</button>
-      </form>
+      <div className={styles.container}>
+        <h1>Contact Form</h1>
+        <div className={styles.des}>
+          Fill the form and I will get back to you!
+        </div>
+        <form className={styles.contactForm} onSubmit={handleSubmit}>
+          <label>
+            Name:
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <label>
+            Email:
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <label>
+            Message:
+            <textarea
+              name="message"
+              placeholder="Enter your message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <button type="submit">Send Message</button>
+          <div className={styles.responsemess}>
+            {response > 0 && <div>{resmessage}</div>}
+          </div>
+        </form>
+      </div>
+
+      <div className={styles.sec2}>
+        <div className={styles.whatsappcont}>
+          <div className={styles.whatsappinfo}>
+            <h4>Hate Waiting?</h4>
+            <div className={styles.whatsappdes}>
+              Send a{" "}
+              <Link
+                href={
+                  "	https://wa.me/919315173922?text=Hey%20Suraj,%20I%20came%20across%20your%20website%20and%20I%20wanted%20to%20know%20if%20you%20are%20available%20to%20talk."
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp Message
+              </Link>{" "}
+              right away!
+            </div>
+          </div>
+          <Link
+            href={
+              "	https://wa.me/919315173922?text=Hey%20Suraj,%20I%20came%20across%20your%20website%20and%20I%20wanted%20to%20know%20if%20you%20are%20available%20to%20talk."
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsWhatsapp size="4em" color="#CCCCCC" />
+          </Link>
+        </div>
+      </div>
+      <Footer />
       <LastComp />
     </>
   );
