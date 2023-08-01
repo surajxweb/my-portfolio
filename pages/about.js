@@ -37,7 +37,7 @@ export default function About() {
               <div className={styles.work}>
                 <h4 className={styles.worktitle}>Kalarric Lifestyle</h4>
                 <div className={styles.workloaction}>
-                  <ImLocation size="1em" color="#ccc" />
+                  <ImLocation size="1em" color="#ccc" className={styles.icon} />
                   Delhi, India
                 </div>
                 <div className={styles.workdate}>March 2022 to April 2023</div>
@@ -51,7 +51,7 @@ export default function About() {
                   Verb Studio (Acquired by KAFQA)
                 </h4>
                 <div className={styles.workloaction}>
-                  <ImLocation size="1em" color="#ccc" />
+                  <ImLocation size="1em" color="#ccc" className={styles.icon} />
                   Bangalore, India
                 </div>
                 <div className={styles.workdate}>
@@ -76,7 +76,7 @@ export default function About() {
             <div className={styles.desinfo}>
               <h4 className={styles.mca}>Masters in Computer Applications</h4>
               <div className={styles.workloaction}>
-                <ImLocation size="1em" color="#ccc" />
+                <ImLocation size="1em" color="#ccc" className={styles.icon} />
                 Vellore Institute of Technology, Vellore
               </div>
               <div className={styles.mcainfo}>8.64 CGPA</div>
@@ -85,9 +85,11 @@ export default function About() {
           <div className={styles.sec4}>
             <h4 className={styles.title}>Hobbies</h4>
             <div className={styles.desinfo}>
-              I like reading books and writing blogs. Astronomy facinates me. I
-              worship cinema. I love Star Wars, Batman, Spiderman and John Wick.
-              Interstellar is my favourite film.
+              I enjoy reading books and writing blogs, and I find astronomy
+              fascinating. Cinema is a significant interest of mine, and I have
+              a particular love for Star Wars, Batman, Spiderman, and John Wick.
+              Among all films, Interstellar holds a special place as my
+              favorite.
             </div>
           </div>
         </div>

@@ -120,7 +120,9 @@ const ContactForm = () => {
               required
             />
           </label>
-          <button type="submit">Send Message</button>
+          <button className={styles.ctabutton} type="submit">
+            Send Message
+          </button>
           <div className={styles.responsemess}>
             {response > 0 && <div>{resmessage}</div>}
           </div>
@@ -135,7 +137,7 @@ const ContactForm = () => {
               Send a{" "}
               <Link
                 href={
-                  "	https://wa.me/919315173922?text=Hey%20Suraj,%20I%20came%20across%20your%20website%20and%20I%20wanted%20to%20know%20if%20you%20are%20available%20to%20talk."
+                  "https://wa.me/919315173922?text=Hey%20Suraj,%20I%20came%20across%20your%20website%20and%20I%20wanted%20to%20know%20if%20you%20are%20available%20to%20talk."
                 }
                 target="_blank"
                 rel="noopener noreferrer"
@@ -147,7 +149,7 @@ const ContactForm = () => {
           </div>
           <Link
             href={
-              "	https://wa.me/919315173922?text=Hey%20Suraj,%20I%20came%20across%20your%20website%20and%20I%20wanted%20to%20know%20if%20you%20are%20available%20to%20talk."
+              "https://wa.me/919315173922?text=Hey%20Suraj,%20I%20came%20across%20your%20website%20and%20I%20wanted%20to%20know%20if%20you%20are%20available%20to%20talk."
             }
             target="_blank"
             rel="noopener noreferrer"

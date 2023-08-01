@@ -70,3 +70,65 @@ margin: 10px
 .worktitle {
     font-size: 15px;
 }
+
+.icon {
+
+    vertical-align: middle;
+}
+
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+    .aboutcontainer {
+      width: 90%;
+    }
+  
+    .sec1 {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image img {
+      margin: 10px auto;
+    }
+  
+    .info {
+      width: 80%;
+      margin: 10px auto;
+    }
+  
+    .sec2,
+    .sec3,
+    .sec4 {
+      padding: 5px;
+      margin: 5px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  }
+  
+  /* For screens smaller than 576px (e.g., small smartphones) */
+  @media (max-width: 576px) {
+    .aboutcontainer {
+      width: 95%;
+    }
+  
+    .myname {
+      font-size: 30px;
+    }
+  
+    .objective {
+      font-size: 14px;
+    }
+  
+    .worktitle {
+      font-size: 13px;
+    }
+  
+    .title {
+      font-size: 18px;
+    }
+  }
+  

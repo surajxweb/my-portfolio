@@ -1,0 +1,64 @@
+.main {
+    width: 550px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.projectimage {
+    padding: 50px 30px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projecttitle, .projectdes, .projectcta {
+    margin:  6px 0;
+}
+
+.main a {
+ margin: 6px 15px 0 0;
+ color: #b72730;    
+}
+
+.main a:hover .icon {
+    margin-left: 2px;
+}
+
+.icon {
+    vertical-align: middle;
+}
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+    .main {
+      width: 100%;
+      padding: 10px;
+      margin: 10px;
+    }
+  
+    .projectimage {
+      padding: 30px;
+    }
+  
+    .projecttitle {
+      font-size: 24px;
+    }
+  }
+  
+  /* For screens smaller than 576px (e.g., small smartphones) */
+  @media (max-width: 576px) {
+    .main {
+      padding: 10px;
+      margin: 10px;
+    }
+  
+    .projectimage {
+      padding: 20px;
+    }
+  
+    .projecttitle {
+      font-size: 20px;
+    }
+  }
+  

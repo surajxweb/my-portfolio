@@ -99,10 +99,65 @@
 }
 
 .ctabutton {
+  cursor: pointer;
   font: inherit;
   padding: 10px 30px;
   font-weight: bold;
   color: #CCCCCC;
   background-image: linear-gradient(to bottom, #b3060f, #f00000);;
   border: none;
+  transition: background-color 1s ease;
+}
+.ctabutton:hover {
+  /* Hover styles */
+  background-image: linear-gradient(to bottom, #f00000, #b3060f);
+  /* Add any other hover styles you want */
+}
+
+.ctabutton:active {
+  /* Active styles when button is clicked/pressed */
+  background-image: linear-gradient(to bottom, #8b0000, #b3060f);
+  /* Add any other active styles you want */
+}
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+  .contactForm {
+    max-width: 80%;
+  }
+
+  .whatsappcont {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .whatsappcont h4 {
+    font-size: 30px;
+  }
+
+  .container {
+    border: none;
+  }
+}
+
+/* For screens smaller than 576px (e.g., small smartphones) */
+@media (max-width: 576px) {
+  .contactForm {
+    max-width: 95%;
+    min-height: unset;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 14px;
+  }
+
+  .contactForm button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .whatsappcont h4 {
+    font-size: 24px;
+  }
 }

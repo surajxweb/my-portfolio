@@ -10,8 +10,10 @@ import { FiFigma } from "react-icons/fi";
 import { FaReact } from "react-icons/fa";
 import { AiOutlineDatabase } from "react-icons/ai";
 import Footer from "../components/Footer";
+import { request, gql } from "graphql-request";
 
-export default function Home() {
+export default function Home({ projects }) {
+  const featuredProjects = projects.slice(0, 4);
   return (
     <div className={styles.container}>
       <Head>
@@ -35,26 +37,26 @@ export default function Home() {
             <div className={styles.jobdes}>
               As a seasoned frontend developer, I possess expertise in HTML5,
               Vanilla CSS, Tailwind CSS, JavaScript ES6+, TypeScript, React 18,
-              Next.js 13 and GraphQL. I am currently learning Node.js,
-              Express.js, MongoDB, and aiming to become a skilled Full Stack
-              MERN Developer. With a passion for crafting exceptional web
-              experiences, I am ready to bring your digital projects to life
+              Next.js 13 and GraphQL. With a passion for crafting exceptional
+              web experiences, I am ready to bring your digital projects to life
               with precision and finesse.
             </div>
-            <button className={styles.ctabutton}>Hire Me!</button>
+            <Link href={"/contact"}>
+              <button className={styles.ctabutton}>Hire Me!</button>
+            </Link>
           </div>
         </div>
         <div className={styles.services}>
           <div className={styles.servicecontainer}>
             <FiFigma className={styles.icon} size="3.5em" color="#b72730" />
-            <h2 className={styles.servicetitle}>UI Design</h2>
+            <h2 className={`${styles.servicetitle}`}>UI Design</h2>
             <div className={styles.servicedes}>
               From captivating user interfaces to seamless user experiences, I
               create designs that engage, delight, and elevate your brand.
             </div>
           </div>
-          <div className={styles.servicecontainer}>
-            <FaReact className={styles.icon} size="3.5em" color="#CCCCCC" />
+          <div className={`${styles.servicecontainer} `}>
+            <FaReact className={styles.icon} size="3.5em" color="#b72730" />
             <h2 className={styles.servicetitle}>Frontend Developement</h2>
             <div className={styles.servicedes}>
               With a keen eye for detail and a passion for crafting responsive
@@ -79,10 +81,21 @@ export default function Home() {
         <div className={styles.projects}>
           <div className={styles.sectiontitle}>
             <h2>Featured Projects</h2>
-            <button>Show More</button>
+            <Link href={"/projects"}>
+              <button className={styles.ctabutton}>Show More</button>
+            </Link>
           </div>
           <div className={styles.projectcontainer}>
-            <ProjectCard />
+            {featuredProjects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                imageurl={project.projectImage.url}
+                des={project.projectDescription}
+                name={project.projectName}
+                siteurl={project.siteurl}
+                codeurl={project.codeurl}
+              />
+            ))}
           </div>
         </div>
 
@@ -105,4 +118,30 @@ export default function Home() {
       <LastComp />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const endpoint = process.env.GRAPHQL_ENDPOINT; // Replace this with your actual GraphQL API endpoint
+  const query = gql`
+    query MyProjects {
+      projects(orderBy: priorityOrder_ASC) {
+        id
+        projectImage {
+          url
+        }
+        projectDescription
+        projectName
+        siteurl
+        codeurl
+      }
+    }
+  `;
+
+  const data = await request(endpoint, query);
+
+  return {
+    props: {
+      projects: data.projects,
+    },
+  };
 }
