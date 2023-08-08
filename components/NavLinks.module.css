@@ -10,6 +10,11 @@
     margin-bottom: 40px;
 }
 
+
+.logo img {
+    animation: bounce 1s infinite;
+  }
+
 .link {
     margin-left: 20px;
 }
@@ -23,16 +28,26 @@
     display: none;
 }
 
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+
 
 @media (max-width: 768px) {
     .links {
         display: none;
     }
     
+    
     .navbar {
         
         font-size: 17.5px;
-        padding: 5px 10px;
+        padding: 5px 10px 0 5px;
         margin-bottom: 0;
         
         

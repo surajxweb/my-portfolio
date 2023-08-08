@@ -26,24 +26,33 @@ export default function Home({ projects }) {
       </Head>
 
       <main className={styles.main}>
-        <NavLinks />
-        <div className={styles.section1}>
-          <div className={styles.meraphoto}>
-            <Image src={photo} alt="profile picture" height={300} width={300} />
-          </div>
-          <div className={styles.helloworld}>
-            <div className={styles.myname}>Hello, I&apos;m Suraj Katyayan</div>
-            <h1 className={styles.jobtitle}>React / Nextjs Developer.</h1>
-            <div className={styles.jobdes}>
-              As a seasoned frontend developer, I possess expertise in HTML5,
-              Vanilla CSS, Tailwind CSS, JavaScript ES6+, TypeScript, React 18,
-              Next.js 13 and GraphQL. With a passion for crafting exceptional
-              web experiences, I am ready to bring your digital projects to life
-              with precision and finesse.
+        <div className={styles.imageBackground}>
+          <NavLinks />
+          <div className={styles.section1}>
+            <div className={styles.meraphoto}>
+              <Image
+                src={photo}
+                alt="profile picture"
+                height={300}
+                width={300}
+              />
             </div>
-            <Link href={"/contact"}>
-              <button className={styles.ctabutton}>Hire Me!</button>
-            </Link>
+            <div className={styles.helloworld}>
+              <div className={styles.myname}>
+                Hello, I&apos;m Suraj Katyayan
+              </div>
+              <h1 className={styles.jobtitle}>React / Nextjs Developer.</h1>
+              <div className={styles.jobdes}>
+                As a seasoned frontend developer, I possess expertise in HTML5,
+                Vanilla CSS, Tailwind CSS, JavaScript ES6+, TypeScript, React
+                18, Next.js 13 and GraphQL. With a passion for crafting
+                exceptional web experiences, I am ready to bring your digital
+                projects to life with precision and finesse.
+              </div>
+              <Link href={"/contact"}>
+                <button className={styles.ctabutton}>Hire Me!</button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className={styles.services}>

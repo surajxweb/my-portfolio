@@ -1,20 +1,33 @@
 /* SECTION 1 */
 
+.imageBackground{
+    background-image: url("../resources/background.png");
+    color: #ffffff;
+}
+
 .section1 {
-    background-color: #111; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
     color: #CCCCCC;
-    padding: 30px 100px;
+    padding: 30px 100px 60px 100px;
 }
+
+
 
 .meraphoto img {
     border-radius: 150px;
     margin-right: 50px;
     border: 2px solid #CCCCCC;
-}
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: transform 0.3s, margin-right 0.3s; /* Add margin-right transition */
+  }
+  
+  .meraphoto img:hover {
+    transform: translateX(-60px) rotate(-45deg); /* Translate horizontally by 10px and rotate */
+    margin-right: 30px;
+  }
 
 .helloworld {
     margin-left: 50px;
@@ -83,6 +96,8 @@
     padding: 30px 30px;
     width: 25%;
     margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(159, 159, 159, 0.3) 0px 30px 60px -30px;
 }
 
 .servicecontainer > * {
@@ -114,7 +129,7 @@
 }
 
 .showmore {
-    margin: auto;
+    margin: 40px auto 10px auto;
     width: 200px;
     text-align: center;
 }
@@ -176,6 +191,9 @@
   }
 
 @media (max-width: 768px) {
+    .imageBackground{
+        background-image: none; 
+    }
     .section1 {
         padding: 30px;
     }
@@ -209,10 +227,17 @@
     }
   
     .contactcontainer {
+    padding: 20px;
       width: 100%;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      
+    }
+
+    .contactcontainer > * {
+        margin: 10px;
     }
   
     .contactme h4 {
