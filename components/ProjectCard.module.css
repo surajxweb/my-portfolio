@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .projecttitle, .projectdes, .projectcta {
@@ -51,10 +52,17 @@
     .main {
       padding: 10px;
       margin: 10px;
+      /* border-bottom: 1px solid #ccc; */
     }
   
     .projectimage {
-      padding: 20px;
+      background-color: #111;
+      border-top: 1px solid #ccc;
+    }
+
+    .projectimage img {
+        width: 300px;
+        height: 169.12px;
     }
   
     .projecttitle {

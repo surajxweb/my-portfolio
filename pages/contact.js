@@ -1,7 +1,7 @@
 // ContactForm.js
 import React, { useState } from "react";
 import styles from "../styles/ContactForm.module.css";
-import Navbar from "../components/navbar";
+import NavLinks from "../components/NavLinks";
 import LastComp from "../components/LastComp";
 import { BsWhatsapp } from "react-icons/bs";
 import Footer from "../components/Footer";
@@ -81,7 +81,7 @@ const ContactForm = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+      <NavLinks />
       <div className={styles.container}>
         <h1>Contact Form</h1>
         <div className={styles.des}>

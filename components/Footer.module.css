@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row column;
+    flex-flow: row wrap;
     padding: 10px;
 }
 

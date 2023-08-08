@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import LastComp from "../components/LastComp";
-import Navbar from "../components/navbar";
+import NavLinks from "../components/NavLinks";
 import ProjectCard from "../components/ProjectCard";
 import photo from "../resources/suraj_avatar/2.png";
 import { FiFigma } from "react-icons/fi";
@@ -26,14 +26,14 @@ export default function Home({ projects }) {
       </Head>
 
       <main className={styles.main}>
-        <Navbar />
+        <NavLinks />
         <div className={styles.section1}>
           <div className={styles.meraphoto}>
             <Image src={photo} alt="profile picture" height={300} width={300} />
           </div>
           <div className={styles.helloworld}>
             <div className={styles.myname}>Hello, I&apos;m Suraj Katyayan</div>
-            <h1 className={styles.jobtitle}>React / Next Developer.</h1>
+            <h1 className={styles.jobtitle}>React / Nextjs Developer.</h1>
             <div className={styles.jobdes}>
               As a seasoned frontend developer, I possess expertise in HTML5,
               Vanilla CSS, Tailwind CSS, JavaScript ES6+, TypeScript, React 18,
@@ -81,9 +81,6 @@ export default function Home({ projects }) {
         <div className={styles.projects}>
           <div className={styles.sectiontitle}>
             <h2>Featured Projects</h2>
-            <Link href={"/projects"}>
-              <button className={styles.ctabutton}>Show More</button>
-            </Link>
           </div>
           <div className={styles.projectcontainer}>
             {featuredProjects.map((project) => (
@@ -97,6 +94,11 @@ export default function Home({ projects }) {
               />
             ))}
           </div>
+          <Link href={"/projects"}>
+            <div className={`${styles.ctabutton} ${styles.showmore}`}>
+              Show More
+            </div>
+          </Link>
         </div>
 
         <div className={styles.contactme}>

@@ -1,4 +1,4 @@
-import Navbar from "../components/navbar";
+import NavLinks from "../components/NavLinks";
 import LastComp from "../components/LastComp";
 import styles from "../styles/About.module.css";
 import Footer from "../components/Footer";
@@ -9,7 +9,7 @@ import { ImLocation } from "react-icons/im";
 export default function About() {
   return (
     <>
-      <Navbar />
+      <NavLinks />
       <div className={styles.main}>
         <h1>About Me</h1>
         <div className={styles.aboutcontainer}>

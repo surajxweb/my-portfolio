@@ -27,6 +27,7 @@
 
 .myname{
     color: #b72730;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -47,6 +48,7 @@
     background-image: linear-gradient(to bottom, #b3060f, #f00000);;
     border: none;
     transition: background-color 1s ease;
+    margin-top: 10px;
 }
 
 .ctabutton:hover {
@@ -94,20 +96,23 @@
     color: #CCCCCC;
     padding: 50px 20px;
 }
-
 .sectiontitle{
-    display: flex;
-    justify-content: space-between;
+    
     text-align: center;
-    margin: 30px auto;
-    width: 400px;
 }
+
+
 
 .projectcontainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
+}
+
+.showmore {
+    margin: auto;
+    width: 150px;
 }
 
 /* SECTION 4 */
@@ -139,6 +144,41 @@
 }
 
 @media (max-width: 768px) {
+    .section1 {
+        padding: 30px;
+    }
+
+    .myname {
+        text-align: center;
+    }
+
+  
+
+    .meraphoto img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .helloworld {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .servicecontainer {
+      width: 100%;
+    }
+  
+    .projectcontainer {
+      flex-direction: column;
+    }
+  
+    .contactcontainer {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
     .contactme h4 {
       font-size: 30px;
       padding: 10px;

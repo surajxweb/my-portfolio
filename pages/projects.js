@@ -1,15 +1,16 @@
-import Navbar from "../components/navbar";
+import NavLinks from "../components/NavLinks";
 import LastComp from "../components/LastComp";
 import styles from "../styles/Project.module.css";
 import ProjectCard from "../components/ProjectCard";
 import { request, gql } from "graphql-request";
+import Footer from "../components/Footer";
 
 export default function Projects({ projects }) {
   return (
     <>
-      <Navbar />
-      <div className={styles.projectscontainer}>
-        <h2 className={styles.name}>Projects by Suraj Katyayan</h2>
+      <NavLinks />
+      <div className={styles.main}>
+        <h1 className={styles.name}>My Projects</h1>
         <div className={styles.projectlist}>
           {projects.map((project) => (
             <ProjectCard
@@ -23,6 +24,7 @@ export default function Projects({ projects }) {
           ))}
         </div>
       </div>
+      <Footer />
       <LastComp />
     </>
   );

@@ -160,4 +160,14 @@
   .whatsappcont h4 {
     font-size: 24px;
   }
+
+ 
+  .sec2 {
+    padding: 20px;
+
+  }
+  .whatsappcont {
+    width: 90%;
+    padding: 10px;
+  }
 }
