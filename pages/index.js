@@ -17,7 +17,7 @@ export default function Home({ projects }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Suraj Katyayan: Full Stack MERN Developer!</title>
+        <title>Suraj Katyayan: React/Nextjs Developer!</title>
         <meta
           name="description"
           content="Welcome to Suraj X Web Dev. Unleash the Power of Stunning Web Apps!"

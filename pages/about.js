@@ -5,10 +5,19 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import photo from "../resources/suraj_avatar/2.png";
 import { ImLocation } from "react-icons/im";
+import Head from "next/head";
 
 export default function About() {
   return (
     <>
+      <Head>
+        <title>About - Suraj Katyayan: React/Nextjs Developer!</title>
+        <meta
+          name="description"
+          content="Welcome to Suraj X Web Dev. Unleash the Power of Stunning Web Apps!"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <NavLinks />
       <div className={styles.main}>
         <h1>About Me</h1>

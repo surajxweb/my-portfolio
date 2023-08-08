@@ -4,10 +4,19 @@ import styles from "../styles/Project.module.css";
 import ProjectCard from "../components/ProjectCard";
 import { request, gql } from "graphql-request";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 export default function Projects({ projects }) {
   return (
     <>
+      <Head>
+        <title>Projects - Suraj Katyayan: React/Nextjs Developer!</title>
+        <meta
+          name="description"
+          content="Welcome to Suraj X Web Dev. Unleash the Power of Stunning Web Apps!"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <NavLinks />
       <div className={styles.main}>
         <h1 className={styles.name}>My Projects</h1>

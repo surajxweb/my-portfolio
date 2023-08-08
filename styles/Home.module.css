@@ -19,10 +19,11 @@
 .helloworld {
     margin-left: 50px;
     width: 50%;
+    
 }
 
 .helloworld > * {
-    margin: 10px;
+    margin: 20px;
 }
 
 .myname{
@@ -33,6 +34,8 @@
 
 .jobdes{
     color: #a5a5a5;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .contactinfo {
@@ -143,6 +146,37 @@
     color: #a5a5a5;
 }
 
+
+
+
+/* Media query for screens between 769px and 999px */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+   
+
+    .helloworld {
+        margin: auto;
+    }
+
+    .section1 {
+        padding: 20px;
+    }
+
+    .services {
+        flex-flow: column wrap;
+        padding: 20px;
+    }
+
+    .services > * {
+        margin: 20px;
+        width: 80%;
+    }
+    
+
+
+
+
+  }
+
 @media (max-width: 768px) {
     .section1 {
         padding: 30px;
@@ -157,12 +191,16 @@
     .meraphoto img {
       width: 120px;
       height: 120px;
+      margin: auto;
     }
   
     .helloworld {
       width: 100%;
       margin-left: 0;
+      text-align: center;
     }
+
+    
   
     .servicecontainer {
       width: 100%;
