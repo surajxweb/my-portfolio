@@ -38,7 +38,7 @@ export default function NavLinks() {
         </ul>
 
         <div className={styles.navIcons}>
-          <Link href={"/contact"} onClick={listVisibilityHandeller}>
+          <Link href={"/contact"}>
             <AiOutlineMessage size="1.5em" color="#cccc" />
           </Link>
         </div>
