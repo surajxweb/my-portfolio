@@ -96,7 +96,7 @@ export default function Home({ projects }) {
           </div>
           <Link href={"/projects"}>
             <div className={`${styles.ctabutton} ${styles.showmore}`}>
-              Show More
+            Expand
             </div>
           </Link>
         </div>
