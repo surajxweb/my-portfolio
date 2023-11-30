@@ -5,7 +5,10 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import photo from "../resources/suraj_avatar/2.png";
 import { ImLocation } from "react-icons/im";
+import { FaDownLong } from "react-icons/fa6";
 import Head from "next/head";
+import resume from "../public/SurajKatyayan_Frontend.pdf";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -34,10 +37,17 @@ export default function About() {
             <div className={styles.info}>
               <h2 className={styles.myname}>Suraj Katyayan</h2>
               <div className={styles.objective}>
-                Seeking a challenging role as a Frontend React Developer to
-                utilize my skills in web development and create engaging user
-                experiences through innovative solutions.
+                As a proficient web developer with a year of experience in an
+                e-commerce startup environment, I am actively seeking new
+                opportunities to leverage my expertise in JavaScript, React and
+                Next.js to drive innovation in projects with a broader user
+                base.
               </div>
+              <Link href={resume} target="_blank">
+                <div className={styles.pdfFile}>
+                  Download Resume <FaDownLong />
+                </div>
+              </Link>
             </div>
           </div>
           <div className={styles.sec2}>
@@ -49,7 +59,9 @@ export default function About() {
                   <ImLocation size="1em" color="#ccc" className={styles.icon} />
                   Delhi, India
                 </div>
-                <div className={styles.workdate}>March 2022 to April 2023</div>
+                <div className={styles.workdate}>
+                  May 2022 to Spetember 2023
+                </div>
                 <div className={styles.jobdes}>
                   <div className={styles.jobdestitle}>Frontend Developer</div>
                   <div className={styles.jobdesinfo}>{/* info */}</div>
@@ -76,8 +88,11 @@ export default function About() {
           <div className={styles.sec4}>
             <h4 className={styles.title}>Technical Skills</h4>
             <div className={styles.desinfo}>
-              <div>HTML5, CSS3, JavaScript ES6+</div>
-              <div>React, Redux, React-Router, TypeScript, Nextjs, GraphQL</div>
+              <div>
+                JavaScript ES6+ | React | NextJS | Redux | CSS Modules | Styled
+                Components | Tailwind CSS | GraphQL | Postman | Figma | Git |
+                TypeScript
+              </div>
             </div>
           </div>
           <div className={styles.sec3}>

@@ -1,134 +1,148 @@
 .main {
-    background-color: #111;
-    color: #ccc;
-    padding: 30px 20px;
+  background-color: #111;
+  color: #ccc;
+  padding: 30px 20px;
 }
-
 
 .main h1 {
   text-align: center;
   margin: 20px;
 }
 
-.aboutcontainer{
-    background-color: #222;
-    width: 60%;
-    margin: 50px auto;
-    padding: 20px;
+.aboutcontainer {
+  background-color: #222;
+  width: 60%;
+  margin: 50px auto;
+  padding: 20px;
 }
 
+.pdfFile {
+  padding: 5px;
+  border: 1px solild #111;
+  margin: 15px auto;
+  background-color: #ccc;
+  text-align: center;
+  color: #111;
+  width: 200px;
+  border-radius: 7px;
+}
 
+.pdfFile:hover {
+  color: #111;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #5f5f5f;
+}
 
 .sec1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
 }
 
 .image img {
-    border-radius: 100px;
-    border: 2px solid #ccc;
-    margin: 10px 30px;
+  border-radius: 100px;
+  border: 2px solid #ccc;
+  margin: 10px 30px;
 }
 
 .info {
-    width: 50%;
-    margin: 10px 30px;
+  width: 50%;
+  margin: 10px 30px;
 }
 
 .myname {
-    font-weight: bold;
-    font-size: 40px;
-    margin-bottom: 10px;
-    text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .objective {
-    font-style: italic;
-    text-align: center
+  font-style: italic;
+  text-align: center;
 }
 
-.sec2, .sec3, .sec4 {
-padding: 10px;
-margin: 10px
+.sec2,
+.sec3,
+.sec4 {
+  padding: 10px;
+  margin: 10px;
 }
 
 .title {
-    margin: 10px 0;
-    font-size: 25px;
+  margin: 10px 0;
+  font-size: 25px;
 }
 
 .works {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .work {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .worktitle {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .icon {
-
-    vertical-align: middle;
+  vertical-align: middle;
 }
-
 
 /* For screens smaller than 768px (e.g., smartphones) */
 @media (max-width: 768px) {
-    .aboutcontainer {
-      width: 90%;
-    }
-  
-    .sec1 {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .image img {
-      margin: 10px auto;
-    }
-  
-    .info {
-      width: 80%;
-      margin: 10px auto;
-    }
-  
-    .sec2,
-    .sec3,
-    .sec4 {
-      padding: 5px;
-      margin: 5px;
-    }
-  
-    .title {
-      font-size: 20px;
-    }
+  .aboutcontainer {
+    width: 90%;
   }
-  
-  /* For screens smaller than 576px (e.g., small smartphones) */
-  @media (max-width: 576px) {
-    .aboutcontainer {
-      width: 95%;
-    }
-  
-    .myname {
-      font-size: 30px;
-    }
-  
-    .objective {
-      font-size: 14px;
-    }
-  
-    .worktitle {
-      font-size: 13px;
-    }
-  
-    .title {
-      font-size: 18px;
-    }
+
+  .sec1 {
+    flex-direction: column;
+    text-align: center;
   }
-  
+
+  .image img {
+    margin: 10px auto;
+  }
+
+  .info {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .sec2,
+  .sec3,
+  .sec4 {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
+
+/* For screens smaller than 576px (e.g., small smartphones) */
+@media (max-width: 576px) {
+  .aboutcontainer {
+    width: 95%;
+  }
+
+  .myname {
+    font-size: 30px;
+  }
+
+  .objective {
+    font-size: 14px;
+  }
+
+  .worktitle {
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}

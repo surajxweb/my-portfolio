@@ -1,7 +1,7 @@
 .main {
-    background-color: #111;
-    color: #ccc;
-    padding: 30px 20px;
+  background-color: #111;
+  color: #ccc;
+  padding: 30px 20px;
 }
 
 .main h1 {
@@ -10,8 +10,8 @@
 }
 
 .projectlist {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
 }

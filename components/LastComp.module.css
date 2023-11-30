@@ -1,21 +1,21 @@
 .credits {
-    background-color: #111;
-    color: #CCCCCC;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
+  background-color: #111;
+  color: #cccccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .credits > * {
-    width: 18%;
+  width: 18%;
 }
 
 .social {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 /* For screens smaller than 768px (e.g., smartphones) */
@@ -45,9 +45,4 @@
   .madeby {
     margin-top: 10px;
   }
-
-  
-  }
-  
- 
-  
+}

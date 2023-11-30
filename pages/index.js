@@ -45,7 +45,7 @@ export default function Home({ projects }) {
               <div className={styles.jobdes}>
                 As a seasoned frontend developer, I possess expertise in HTML5,
                 Vanilla CSS, Tailwind CSS, JavaScript ES6+, TypeScript, React
-                18, Next.js 13 and GraphQL. With a passion for crafting
+                18, Next.js 14 and GraphQL. With a passion for crafting
                 exceptional web experiences, I am ready to bring your digital
                 projects to life with precision and finesse.
               </div>

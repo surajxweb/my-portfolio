@@ -1,247 +1,232 @@
 /* SECTION 1 */
 
-.imageBackground{
-    background-image: url("../resources/header_bg.png");
-    color: #ffffff;
+.imageBackground {
+  background-image: url("../resources/header_bg.png");
+  color: #ffffff;
 }
 
 .section1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-    color: #CCCCCC;
-    padding: 30px 100px 60px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  color: #cccccc;
+  padding: 30px 100px 60px 100px;
 }
 
-
-
 .meraphoto img {
-    border-radius: 150px;
-    margin-right: 50px;
-    border: 2px solid #CCCCCC;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    transition: transform 0.3s, margin-right 0.3s; /* Add margin-right transition */
-  }
-  
-  .meraphoto img:hover {
-    transform: translateX(-60px) rotate(-45deg); /* Translate horizontally by 10px and rotate */
-    margin-right: 30px;
-  }
+  border-radius: 150px;
+  margin-right: 50px;
+  border: 2px solid #cccccc;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  transition:
+    transform 0.3s,
+    margin-right 0.3s; /* Add margin-right transition */
+}
+
+.meraphoto img:hover {
+  transform: translateX(-60px) rotate(-45deg); /* Translate horizontally by 10px and rotate */
+  margin-right: 30px;
+}
 
 .helloworld {
-    margin-left: 50px;
-    width: 50%;
-    
+  margin-left: 50px;
+  width: 50%;
 }
 
 .helloworld > * {
-    margin: 20px;
+  margin: 20px;
 }
 
-.myname{
-    color: #b72730;
-    font-size: 18px;
-    font-weight: bold;
+.myname {
+  color: #b72730;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.jobdes{
-    color: #a5a5a5;
-    text-align: justify;
-    text-justify: inter-word;
+.jobdes {
+  color: #a5a5a5;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .contactinfo {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 .ctabutton {
-    cursor: pointer;
-    font: inherit;
-    padding: 10px 30px;
-    font-weight: bold;
-    color: #CCCCCC;
-    background-image: linear-gradient(to bottom, #b3060f, #f00000);;
-    border: none;
-    transition: background-color 1s ease;
-    margin-top: 10px;
+  cursor: pointer;
+  font: inherit;
+  padding: 10px 30px;
+  font-weight: bold;
+  color: #cccccc;
+  background-image: linear-gradient(to bottom, #b3060f, #f00000);
+  border: none;
+  transition: background-color 1s ease;
+  margin-top: 10px;
 }
 
 .ctabutton:hover {
-    /* Hover styles */
-    background-image: linear-gradient(to bottom, #f00000, #b3060f);
-    /* Add any other hover styles you want */
-  }
-  
-  .ctabutton:active {
-    /* Active styles when button is clicked/pressed */
-    background-image: linear-gradient(to bottom, #8b0000, #b3060f);
-    /* Add any other active styles you want */
-  }
+  /* Hover styles */
+  background-image: linear-gradient(to bottom, #f00000, #b3060f);
+  /* Add any other hover styles you want */
+}
+
+.ctabutton:active {
+  /* Active styles when button is clicked/pressed */
+  background-image: linear-gradient(to bottom, #8b0000, #b3060f);
+  /* Add any other active styles you want */
+}
 
 /* SECTION 2 */
 
 .services {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow: row wrap;
-    background-color: #222;
-    padding: 20px 30px;
-    color: #CCCCCC;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: #222;
+  padding: 20px 30px;
+  color: #cccccc;
 }
 
 .servicecontainer {
-    background-color: #111;
-    padding: 30px 30px;
-    width: 25%;
-    margin: 50px 0;
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(159, 159, 159, 0.3) 0px 30px 60px -30px;
+  background-color: #111;
+  padding: 30px 30px;
+  width: 25%;
+  margin: 50px 0;
+  border-radius: 10px;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(159, 159, 159, 0.3) 0px 30px 60px -30px;
 }
 
 .servicecontainer > * {
-    margin: 15px 10px;
+  margin: 15px 10px;
 }
 
 .frontend {
-    background-color: #b72730;
+  background-color: #b72730;
 }
 
 /* SECTION 3 */
-.projects{
-    background-color: #111;
-    color: #CCCCCC;
-    padding: 50px 20px;
+.projects {
+  background-color: #111;
+  color: #cccccc;
+  padding: 50px 20px;
 }
-.sectiontitle{
-    
-    text-align: center;
+.sectiontitle {
+  text-align: center;
 }
-
-
 
 .projectcontainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .showmore {
-    margin: 40px auto 10px auto;
-    width: 200px;
-    text-align: center;
+  margin: 40px auto 10px auto;
+  width: 200px;
+  text-align: center;
 }
 
 /* SECTION 4 */
 
 .contactme {
-    background-color: #222;
-    padding: 20px;
+  background-color: #222;
+  padding: 20px;
 }
 
 .contactcontainer {
-    background-color: #111;
-    width: 55%;
-    color: #CCCCCC;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 50px auto 20px auto;
-    padding: 30px;
-
+  background-color: #111;
+  width: 55%;
+  color: #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px auto 20px auto;
+  padding: 30px;
 }
 
 .contactme h4 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .contactdes {
-    margin: 20px 0;
-    color: #a5a5a5;
+  margin: 20px 0;
+  color: #a5a5a5;
 }
-
-
-
 
 /* Media query for screens between 769px and 999px */
 @media screen and (min-width: 769px) and (max-width: 999px) {
-   
-
-    .helloworld {
-        margin: auto;
-    }
-
-    .section1 {
-        padding: 20px;
-    }
-
-    .services {
-        flex-flow: column wrap;
-        padding: 20px;
-    }
-
-    .services > * {
-        margin: 20px;
-        width: 80%;
-    }
-
-
+  .helloworld {
+    margin: auto;
   }
+
+  .section1 {
+    padding: 20px;
+  }
+
+  .services {
+    flex-flow: column wrap;
+    padding: 20px;
+  }
+
+  .services > * {
+    margin: 20px;
+    width: 80%;
+  }
+}
 
 @media (max-width: 768px) {
-    .imageBackground{
-        background-image: none; 
-    }
-    .section1 {
-        padding: 30px;
-    }
-
-    .myname {
-        text-align: center;
-    }
-
-  
-
-    .meraphoto img {
-      width: 120px;
-      height: 120px;
-      margin: auto;
-    }
-  
-    .helloworld {
-      width: 100%;
-      margin-left: 0;
-      text-align: center;
-    }
-
-    
-  
-    .servicecontainer {
-      width: 100%;
-    }
-  
-    .projectcontainer {
-      flex-direction: column;
-    }
-  
-    .contactcontainer {
-    padding: 20px;
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      
-    }
-
-    .contactcontainer > * {
-        margin: 10px;
-    }
-  
-    .contactme h4 {
-      font-size: 30px;
-      padding: 10px;
-    }
+  .imageBackground {
+    background-image: none;
   }
+  .section1 {
+    padding: 30px;
+  }
+
+  .myname {
+    text-align: center;
+  }
+
+  .meraphoto img {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+  }
+
+  .helloworld {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .servicecontainer {
+    width: 100%;
+  }
+
+  .projectcontainer {
+    flex-direction: column;
+  }
+
+  .contactcontainer {
+    padding: 20px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contactcontainer > * {
+    margin: 10px;
+  }
+
+  .contactme h4 {
+    font-size: 30px;
+    padding: 10px;
+  }
+}
