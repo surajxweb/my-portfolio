@@ -82,7 +82,7 @@ export default function Home({ projects }) {
             <h2 className={styles.servicetitle}>Backend Developement</h2>
             <div className={styles.servicedes}>
               As an aspiring Full Stack MERN Developer, I am learning Node.js,
-              Express.js, and MongoDB to build innovative web applications. :)
+              Express.js, and MongoDB to build innovative web applications. 🚀
             </div>
           </div>
         </div>
