@@ -1,93 +1,107 @@
 .main {
   width: 550px;
-  padding: 20px;
-  margin: 60px 20px;
-  box-shadow:
-    rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px,
-    rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px,
-    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #222;
+  margin: 20px;
+  border: 0.3px solid #313131;
 }
 
-.main:hover {
-  box-shadow:
-    rgba(206, 203, 203, 0.12) 0px 2px 4px 0px,
-    rgba(206, 203, 203, 0.32) 0px 2px 16px 0px;
+.infoContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .projectimage {
-  padding: 50px 30px;
-  background-color: #222;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
+  width: 100%;
+  overflow: hidden;
 }
 
-.projecttitle,
+.projectimage img {
+  width: 100%;
+  height: auto;
+}
+
+/* .projecttitle,
 .projectdes,
+.tech,
 .projectcta {
-  margin: 6px 0;
+  margin: 10px;
+} */
+
+.projectdes,
+.tech {
+  font-size: 16px;
 }
 
-.main a {
-  margin: 6px 15px 0 0;
-  color: #b72730;
+.projecttitle {
+  font-family: someBoldFont;
+  font-size: 17px;
 }
 
-.main a:hover .icon {
-  margin-left: 2px;
+.demo {
+  background-color: #b72730;
+  color: #ccc;
 }
 
-.icon {
-  vertical-align: middle;
+.demo:hover {
+  background-color: rgb(157, 20, 29);
 }
 
+.demo,
+.code {
+  padding: 5px 10px;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.code:hover {
+  background-color: #fff;
+}
+
+.code {
+  color: #111;
+  background-color: #ccc;
+}
+
+.projectcta {
+  display: flex;
+  gap: 10px;
+  margin: 5px 0;
+}
 /* For screens smaller than 768px (e.g., smartphones) */
 @media (max-width: 768px) {
   .main {
-    width: 100%;
-    padding: 10px;
-    margin: 10px;
-    box-shadow:
-      rgba(206, 203, 203, 0.3) 0px 2px 0px,
-      rgba(206, 203, 203, 0.22) 0px 2px 0px;
+    width: 90%;
+    margin: 0px;
   }
 
-  .main:hover {
-    box-shadow:
-      rgba(206, 203, 203, 0.3) 0px 2px 0px,
-      rgba(206, 203, 203, 0.22) 0px 2px 0px;
+  .infoContainer {
+    height: auto;
   }
 
-  .projectimage {
-    padding: 30px;
+  .projectcta {
+    flex-direction: column;
   }
 
-  .projecttitle {
-    font-size: 24px;
+  .code,
+  .demo {
+    text-align: center;
   }
 }
 
 /* For screens smaller than 576px (e.g., small smartphones) */
 @media (max-width: 576px) {
   .main {
-    padding: 10px;
     margin: 10px;
     /* border-bottom: 1px solid #ccc; */
   }
 
-  .projectimage {
-    background-color: #111;
-  }
-
   .projectimage img {
-    width: 300px;
-    height: 169.12px;
-  }
-
-  .projecttitle {
-    font-size: 20px;
+    width: 100%;
+    height: auto;
   }
 }

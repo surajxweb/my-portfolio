@@ -3,7 +3,14 @@ import Image from "next/image";
 import styles from "./ProjectCard.module.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-export default function ProjectCard({ imageurl, des, name, siteurl, codeurl }) {
+export default function ProjectCard({
+  imageurl,
+  des,
+  name,
+  siteurl,
+  codeurl,
+  tech,
+}) {
   return (
     <div className={styles.main}>
       <div className={styles.projectimage}>
@@ -14,15 +21,18 @@ export default function ProjectCard({ imageurl, des, name, siteurl, codeurl }) {
           height={200}
         />
       </div>
-      <h3 className={styles.projecttitle}>{name}</h3>
-      <div className={styles.projectdes}>{des}</div>
-      <div className={styles.projectcta}>
-        <Link target="_blank" rel="noopener noreferrer" href={siteurl}>
-          Show Site <AiOutlineArrowRight className={styles.icon} />
-        </Link>
-        <Link target="_blank" rel="noopener noreferrer" href={codeurl}>
-          Show Code <AiOutlineArrowRight className={styles.icon} />
-        </Link>
+      <div className={styles.infoContainer}>
+        <h3 className={styles.projecttitle}>{name}</h3>
+        <div className={styles.projectdes}>{des}</div>
+        {tech && <div className={styles.tech}>Tech Stack Used: {tech}</div>}
+        <div className={styles.projectcta}>
+          <Link target="_blank" className={styles.demo} href={siteurl}>
+            Show Deployed Site
+          </Link>
+          <Link target="_blank" className={styles.code} href={codeurl}>
+            Show Code
+          </Link>
+        </div>
       </div>
     </div>
   );

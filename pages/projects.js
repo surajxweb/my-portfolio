@@ -10,16 +10,16 @@ export default function Projects({ projects }) {
   return (
     <>
       <Head>
-        <title>Projects - Suraj Katyayan: React/Nextjs Developer!</title>
+        <title>Suraj Katyayan: Frontend Developer</title>
         <meta
           name="description"
-          content="Welcome to Suraj X Web Dev. Unleash the Power of Stunning Web Apps!"
+          content="Welcome to SurajCodes.in. I turn ideas into beautiful web experiences!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavLinks />
       <div className={styles.main}>
-        <h1 className={styles.name}>My Projects</h1>
+        <h1 className={styles.pageTitle}>My Projects</h1>
         <div className={styles.projectlist}>
           {projects.map((project) => (
             <ProjectCard
@@ -29,6 +29,7 @@ export default function Projects({ projects }) {
               name={project.projectName}
               siteurl={project.siteurl}
               codeurl={project.codeurl}
+              tech={project.techUsed}
             />
           ))}
         </div>
@@ -52,6 +53,7 @@ export async function getStaticProps() {
         projectName
         siteurl
         codeurl
+        techUsed
       }
     }
   `;

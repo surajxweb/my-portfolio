@@ -74,10 +74,10 @@ const ContactForm = () => {
   return (
     <>
       <Head>
-        <title>Contact - Suraj Katyayan: React/Nextjs Developer!</title>
+        <title>Suraj Katyayan: Frontend Developer</title>
         <meta
           name="description"
-          content="Welcome to Suraj X Web Dev. Unleash the Power of Stunning Web Apps!"
+          content="Welcome to SurajCodes.in. I turn ideas into beautiful web experiences!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

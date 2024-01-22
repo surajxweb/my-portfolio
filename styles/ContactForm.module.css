@@ -4,6 +4,13 @@
   color: #cccccc;
 }
 
+.container h1 {
+  text-align: center;
+  margin: 20px;
+  font-size: 22px;
+  font-family: someExtraBoldFont;
+}
+
 .container h1,
 .des {
   text-align: center;
@@ -43,22 +50,9 @@
 }
 
 .contactForm textarea {
-  resize: vertical;
+  resize: none;
+  height: 140px;
   font-family: inherit;
-}
-
-.contactForm button {
-  margin-top: 10px;
-  font: inherit;
-  padding: 10px 30px;
-  font-weight: bold;
-  color: #cccccc;
-  background-image: linear-gradient(to bottom, #b3060f, #f00000);
-  border: none;
-}
-
-.contactForm button:hover {
-  background-color: #0056b3;
 }
 
 .responsemess {
@@ -85,6 +79,7 @@
 
 .whatsappcont h4 {
   font-size: 40px;
+  font-family: someBoldFont;
 }
 
 .whatsappdes {
@@ -103,20 +98,13 @@
   padding: 10px 30px;
   font-weight: bold;
   color: #cccccc;
-  background-image: linear-gradient(to bottom, #b3060f, #f00000);
+  background-color: rgb(183, 39, 48);
   border: none;
   transition: background-color 1s ease;
 }
-.ctabutton:hover {
-  /* Hover styles */
-  background-image: linear-gradient(to bottom, #f00000, #b3060f);
-  /* Add any other hover styles you want */
-}
 
-.ctabutton:active {
-  /* Active styles when button is clicked/pressed */
-  background-image: linear-gradient(to bottom, #8b0000, #b3060f);
-  /* Add any other active styles you want */
+.ctabutton:hover {
+  background-color: rgb(157, 20, 29);
 }
 
 /* For screens smaller than 768px (e.g., smartphones) */

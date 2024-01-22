@@ -16,6 +16,10 @@
   padding: 20px;
 }
 
+.link:hover {
+  color: rgb(183, 39, 48);
+}
+
 /* For screens smaller than 768px (e.g., smartphones) */
 @media (max-width: 768px) {
   .links {

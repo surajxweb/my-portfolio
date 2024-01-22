@@ -6,12 +6,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { GiCancel } from "react-icons/gi";
 import { useState } from "react";
 import { AiOutlineMessage } from "react-icons/ai";
+import { usePathname } from "next/navigation";
 
 export default function NavLinks() {
   const [listVisibility, setListVisibility] = useState(false);
   const listVisibilityHandeller = () => {
     setListVisibility(!listVisibility);
   };
+  const path = usePathname();
   return (
     <>
       <div className={styles.navbar}>
@@ -19,23 +21,37 @@ export default function NavLinks() {
           {!listVisibility && <GiHamburgerMenu size="1.5em" color="#cccc" />}
           {listVisibility && <GiCancel size="1.5em" color="#cccc" />}
         </div>
-        <div className={styles.logo}>
-          <Image alt="logo" height={60} width={60} src={logo} />
-        </div>
-        <ul className={styles.links}>
-          <Link href={"/"} className={styles.link}>
+        <Link href={"/"}>
+          <div className={styles.logo}>
+            <Image alt="logo" height={60} width={60} src={logo} />
+          </div>
+        </Link>
+        <div className={styles.links}>
+          <Link
+            className={`${path === "/" ? styles.selectedLink : styles.unselectedLink}`}
+            href={"/"}
+          >
             Home
           </Link>
-          <Link href={"/projects"} className={styles.link}>
+          <Link
+            className={`${path === "/projects" ? styles.selectedLink : styles.unselectedLink}`}
+            href={"/projects"}
+          >
             Projects
           </Link>
-          <Link href={"/about"} className={styles.link}>
+          <Link
+            className={`${path === "/about" ? styles.selectedLink : styles.unselectedLink}`}
+            href={"/about"}
+          >
             About
           </Link>
-          <Link href={"/contact"} className={styles.link}>
+          <Link
+            className={`${path === "/contact" ? styles.selectedLink : styles.unselectedLink}`}
+            href={"/contact"}
+          >
             Contact
           </Link>
-        </ul>
+        </div>
 
         <div className={styles.navIcons}>
           <Link href={"/contact"}>

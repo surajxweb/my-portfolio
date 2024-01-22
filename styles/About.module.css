@@ -7,6 +7,8 @@
 .main h1 {
   text-align: center;
   margin: 20px;
+  font-size: 22px;
+  font-family: someExtraBoldFont;
 }
 
 .aboutcontainer {
@@ -48,7 +50,7 @@
 }
 
 .info {
-  width: 50%;
+  width: 55%;
   margin: 10px 30px;
 }
 
@@ -74,6 +76,7 @@
 .title {
   margin: 10px 0;
   font-size: 25px;
+  font-family: someBoldFont;
 }
 
 .works {

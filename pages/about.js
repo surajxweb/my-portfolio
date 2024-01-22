@@ -14,10 +14,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Suraj Katyayan: React/Nextjs Developer!</title>
+        <title>Suraj Katyayan: Frontend Developer</title>
         <meta
           name="description"
-          content="Welcome to Suraj X Web Dev. Unleash the Power of Stunning Web Apps!"
+          content="Welcome to SurajCodes.in. I turn ideas into beautiful web experiences!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -35,7 +35,7 @@ export default function About() {
               ></Image>
             </div>
             <div className={styles.info}>
-              <h2 className={styles.myname}>Suraj Katyayan</h2>
+              <h1 className={styles.myname}>Suraj Katyayan</h1>
               <div className={styles.objective}>
                 As a proficient web developer with a year of experience in an
                 e-commerce startup environment, I am actively seeking new
@@ -43,11 +43,11 @@ export default function About() {
                 Next.js to drive innovation in projects with a broader user
                 base.
               </div>
-              <Link href={resume} target="_blank">
+              {/* <Link href={resume} target="_blank">
                 <div className={styles.pdfFile}>
                   Download Resume <FaDownLong />
                 </div>
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className={styles.sec2}>
@@ -89,9 +89,11 @@ export default function About() {
             <h4 className={styles.title}>Technical Skills</h4>
             <div className={styles.desinfo}>
               <div>
-                JavaScript ES6+ | React | NextJS | Redux | CSS Modules | Styled
-                Components | Tailwind CSS | GraphQL | Postman | Figma | Git |
-                TypeScript
+                HTML, CSS, JavaScript, TypeScript, Nextjs, React, Redux Toolkit,
+                React Testing Library, Jest, React Hook Form, Zod Validation,
+                Framer Motion, CSS Modules, Styled Components, Tailwind CSS,
+                Shadcn, Redix UI, Material UI, Nodejs, MongoDB, GraphQL, Postman
+                and Git Version Control.
               </div>
             </div>
           </div>

@@ -10,17 +10,23 @@ import { FiFigma } from "react-icons/fi";
 import { FaReact } from "react-icons/fa";
 import { AiOutlineDatabase } from "react-icons/ai";
 import Footer from "../components/Footer";
+import { IoMail } from "react-icons/io5";
 import { request, gql } from "graphql-request";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
 
 export default function Home({ projects }) {
   const featuredProjects = projects.slice(0, 4);
+  console.log(featuredProjects);
   return (
     <div className={styles.container}>
       <Head>
-        <title>Suraj Katyayan: React/Nextjs Developer!</title>
+        <title>Suraj Katyayan: Frontend Developer</title>
         <meta
           name="description"
-          content="Welcome to Suraj X Web Dev. Unleash the Power of Stunning Web Apps!"
+          content="Welcome to SurajCodes.in. I turn ideas into beautiful web experiences!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -41,36 +47,57 @@ export default function Home({ projects }) {
               <div className={styles.myname}>
                 Hello, I&apos;m Suraj Katyayan
               </div>
-              <h1 className={styles.jobtitle}>React / Nextjs Developer.</h1>
               <div className={styles.jobdes}>
-                As a seasoned frontend developer, I possess expertise in HTML5,
-                Vanilla CSS, Tailwind CSS, JavaScript ES6+, TypeScript, React
-                18, Next.js 14 and GraphQL. With a passion for crafting
-                exceptional web experiences, I am ready to bring your digital
-                projects to life with precision and finesse.
+                Experienced Frontend Developer with a versatile skill set that
+                extends to Backend technologies. Proficient in JavaScript,
+                React, TypeScript, Nextjs, Node, MongoDB and GraphQL; and
+                specialized in turning conceptual ideas into elegant code.
               </div>
-              <Link href={"/contact"}>
-                <button className={styles.ctabutton}>Hire Me!</button>
+              <div className={styles.links}>
+              <Link
+          href="https://www.linkedin.com/in/surajxweb/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+                <FaLinkedin className={styles.icon} size={"2em"} />
+                </Link>
+                <Link
+          href="https://github.com/surajxweb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+                <FaGithub className={styles.icon} size={"2em"} />
+                </Link>
+                <Link
+          href="https://twitter.com/itssuzikat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+                <FaTwitterSquare className={styles.icon} size={"2em"} />
+                </Link>
+                <Link  href="https://www.instagram.com/itssuzikat/"
+          target="_blank"
+          rel="noopener noreferrer">
+                <FaInstagram className={styles.icon} size={"2em"} />
+
+                </Link>
+              </div>
+              <Link href={"/contact"}  className={styles.contactButton}>
+            
+                Contact me <IoMail className="react-icons" />
+              
               </Link>
             </div>
           </div>
         </div>
         <div className={styles.services}>
-          <div className={styles.servicecontainer}>
-            <FiFigma className={styles.icon} size="3.5em" color="#b72730" />
-            <h2 className={`${styles.servicetitle}`}>UI Design</h2>
-            <div className={styles.servicedes}>
-              From captivating user interfaces to seamless user experiences, I
-              create designs that engage, delight, and elevate your brand.
-            </div>
-          </div>
           <div className={`${styles.servicecontainer} `}>
             <FaReact className={styles.icon} size="3.5em" color="#b72730" />
             <h2 className={styles.servicetitle}>Frontend Developement</h2>
             <div className={styles.servicedes}>
               With a keen eye for detail and a passion for crafting responsive
               and interactive user interfaces, I bring your ideas to life with
-              the power of React and Nextjs. .
+              the power of React and Nextjs.
             </div>
           </div>
           <div className={styles.servicecontainer}>
@@ -83,6 +110,14 @@ export default function Home({ projects }) {
             <div className={styles.servicedes}>
               As an aspiring Full Stack MERN Developer, I am learning Node.js,
               Express.js, and MongoDB to build innovative web applications. 🚀
+            </div>
+          </div>
+          <div className={styles.servicecontainer}>
+            <FiFigma className={styles.icon} size="3.5em" color="#b72730" />
+            <h2 className={`${styles.servicetitle}`}>UI Design</h2>
+            <div className={styles.servicedes}>
+              From captivating user interfaces to seamless user experiences, I
+              create designs that engage, delight, and elevate your brand.
             </div>
           </div>
         </div>
@@ -100,6 +135,7 @@ export default function Home({ projects }) {
                 name={project.projectName}
                 siteurl={project.siteurl}
                 codeurl={project.codeurl}
+                tech={project.techUsed}
               />
             ))}
           </div>
@@ -144,6 +180,7 @@ export async function getStaticProps() {
         projectName
         siteurl
         codeurl
+        techUsed
       }
     }
   `;

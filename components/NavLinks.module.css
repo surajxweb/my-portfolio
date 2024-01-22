@@ -14,8 +14,21 @@
   animation: bounce 1s infinite;
 }
 
-.link {
+.unselectedLink,
+.selectedLink {
   margin-left: 20px;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+.unselectedLink {
+  background-color: #ccc;
+  color: #222;
+}
+
+.selectedLink {
+  background-color: #222;
+  color: #b72730;
 }
 
 .mobilelinks {
