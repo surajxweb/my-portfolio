@@ -18,8 +18,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 
 export default function Home({ projects }) {
-  const featuredProjects = projects.slice(0, 4);
-  console.log(featuredProjects);
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -127,7 +126,7 @@ export default function Home({ projects }) {
             <h2>Featured Projects</h2>
           </div>
           <div className={styles.projectcontainer}>
-            {featuredProjects.map((project) => (
+            {projects.map((project) => (
               <ProjectCard
                 key={project.id}
                 imageurl={project.projectImage.url}
@@ -171,7 +170,7 @@ export async function getStaticProps() {
   const endpoint = process.env.GRAPHQL_ENDPOINT; // Replace this with your actual GraphQL API endpoint
   const query = gql`
     query MyProjects {
-      projects(orderBy: priorityOrder_ASC) {
+      projects(orderBy: order_ASC, first: 4) {
         id
         projectImage {
           url
@@ -181,6 +180,7 @@ export async function getStaticProps() {
         siteurl
         codeurl
         techUsed
+        order
       }
     }
   `;

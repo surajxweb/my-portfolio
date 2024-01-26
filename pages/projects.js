@@ -44,7 +44,7 @@ export async function getStaticProps() {
   const endpoint = process.env.GRAPHQL_ENDPOINT; // Replace this with your actual GraphQL API endpoint
   const query = gql`
     query MyProjects {
-      projects(orderBy: priorityOrder_ASC, first: 20) {
+      projects(orderBy: order_ASC, first: 20) {
         id
         projectImage {
           url
@@ -54,6 +54,7 @@ export async function getStaticProps() {
         siteurl
         codeurl
         techUsed
+        order
       }
     }
   `;
