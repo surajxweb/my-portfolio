@@ -60,7 +60,7 @@ export default function About() {
                   Delhi, India
                 </div>
                 <div className={styles.workdate}>
-                  May 2022 to Spetember 2023
+                  May 2022 to December 2023
                 </div>
                 <div className={styles.jobdes}>
                   <div className={styles.jobdestitle}>Frontend Developer</div>
